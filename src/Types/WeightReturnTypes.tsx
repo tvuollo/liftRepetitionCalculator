@@ -1,5 +1,5 @@
-export interface Combined1RepMax {
-    Estimated1RepMax: number;
+export interface CombinedWeightCalculation {
+    Average: number;
     Formulas: {
         Brzycki: number;
         Epley: number;
@@ -7,4 +7,13 @@ export interface Combined1RepMax {
         Lombardi: number;
         OConner: number;
     };
+}
+
+export interface NamedCalculation extends CombinedWeightCalculation {
+    Name: string;
+}
+
+export interface CombinedWeightCalculations {
+    Average: number;
+    Calculations: NamedCalculation[];
 }
